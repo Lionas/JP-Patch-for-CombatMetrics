@@ -1,24 +1,27 @@
 ﻿ZO_CreateStringId("SI_COMBAT_METRICS_LANG", "jp")
+ZO_CreateStringId("SI_COMBAT_METRICS_STD_FONT", "EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf") -- EsoUi/Common/Fonts/Univers57.otf
+ZO_CreateStringId("SI_COMBAT_METRICS_ESO_FONT", "EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf") -- EsoUi/Common/Fonts/Univers67.otf
 
 -- UI&Control
 ZO_CreateStringId("SI_COMBAT_METRICS_FONT_SIZE", "11") -- 14
 
 ZO_CreateStringId("SI_COMBAT_METRICS_SHOW_XPS", "<<1>> / <<2>> (<<3>>%)")
-ZO_CreateStringId("SI_COMBAT_METRICS_CALC", "計算中...")
-ZO_CreateStringId("SI_COMBAT_METRICS_GROUP", "グループ")
-ZO_CreateStringId("SI_COMBAT_METRICS_SELECTION", "選択")
+ZO_CreateStringId("SI_COMBAT_METRICS_CALC", "計算中...") -- Calculating...
+ZO_CreateStringId("SI_COMBAT_METRICS_GROUP", "グループ") -- Group
+ZO_CreateStringId("SI_COMBAT_METRICS_SELECTION", "選択中") -- Selection
 
-ZO_CreateStringId("SI_COMBAT_METRICS_BASE_REG", "基本再生")
-ZO_CreateStringId("SI_COMBAT_METRICS_UNKNOWN", "不明")
+ZO_CreateStringId("SI_COMBAT_METRICS_BASE_REG", "基本再生") -- Base Regeneration
+ZO_CreateStringId("SI_COMBAT_METRICS_DRAIN", "吸収") -- Drain
+ZO_CreateStringId("SI_COMBAT_METRICS_UNKNOWN", "不明") -- Unknown
 
-ZO_CreateStringId("SI_COMBAT_METRICS_BLOCKS", "Blocks")
-ZO_CreateStringId("SI_COMBAT_METRICS_CRITS", "クリ")
+ZO_CreateStringId("SI_COMBAT_METRICS_BLOCKS", "Blocks") -- Blocks
+ZO_CreateStringId("SI_COMBAT_METRICS_CRITS", "クリ") -- Crits
 
 ZO_CreateStringId("SI_COMBAT_METRICS_DAMAGE", "ダメージ") -- Damage
 ZO_CreateStringId("SI_COMBAT_METRICS_HIT", "ヒット")
 ZO_CreateStringId("SI_COMBAT_METRICS_DPS", "DPS")
 
-ZO_CreateStringId("SI_COMBAT_METRICS_HEALING", "回復")
+ZO_CreateStringId("SI_COMBAT_METRICS_HEALING", "回復") -- Healing
 ZO_CreateStringId("SI_COMBAT_METRICS_HEALS", "回復数")
 ZO_CreateStringId("SI_COMBAT_METRICS_HPS", "HPS")
 
@@ -111,21 +114,37 @@ ZO_CreateStringId("SI_COMBAT_METRICS_TOGGLE_STATS_CHANGE_EVENTS", "統計の変�
 ZO_CreateStringId("SI_COMBAT_METRICS_DEBUFF", "（デ）バフ")  -- (De-)Buffs
 ZO_CreateStringId("SI_COMBAT_METRICS_DEBUFF_OUT", "（デ）バフ\nアウト")  -- (De-)Buffs\nOut
 ZO_CreateStringId("SI_COMBAT_METRICS_MAGICKA_PM", "マジカ\n +/-")  -- Magicka\n +/-
-ZO_CreateStringId("SI_COMBAT_METRICS_STAMINA_PM", "スナミナ\n +/-")  -- Stamina\n +/-
+ZO_CreateStringId("SI_COMBAT_METRICS_STAMINA_PM", "スタミナ\n +/-")  -- Stamina\n +/-
 
 ZO_CreateStringId("SI_COMBAT_METRICS_BUFF", "バフ")  -- Buff
-ZO_CreateStringId("SI_COMBAT_METRICS_SHARP", "#")  -- #
-ZO_CreateStringId("SI_COMBAT_METRICS_UPTIME", "稼働時間")  -- Uptime
+ZO_CreateStringId("SI_COMBAT_METRICS_SHARP", "回数")  -- #
+ZO_CreateStringId("SI_COMBAT_METRICS_UPTIME", "時間")  -- Uptime
 
-ZO_CreateStringId("SI_COMBAT_METRICS_SOURCE", " ソース")  --  Source
+ZO_CreateStringId("SI_COMBAT_METRICS_SOURCE", " 源泉")  --  Source
 ZO_CreateStringId("SI_COMBAT_METRICS_PM_SEC", "±/秒")  -- ±/s
 ZO_CreateStringId("SI_COMBAT_METRICS_TARGET", "ターゲット")  -- Target
 ZO_CreateStringId("SI_COMBAT_METRICS_PERCENT", "%")  -- %
 
 ZO_CreateStringId("SI_COMBAT_METRICS_AVILITY", "アビリティ")  -- Ability
-ZO_CreateStringId("SI_COMBAT_METRICS_PER_HITS", "/ヒット")  -- Crits/Hits
+ZO_CreateStringId("SI_COMBAT_METRICS_PER_HITS", "クリ/ヒット")  -- Crits/Hits
 ZO_CreateStringId("SI_COMBAT_METRICS_CRITS_PER", "クリ %")  -- Crit %
 
+ZO_CreateStringId("SI_COMBAT_METRICS_MAGICKA", "マジカ ")  -- Magicka 
+ZO_CreateStringId("SI_COMBAT_METRICS_STAMINA", "スタミナ ")  -- Stamina 
+ZO_CreateStringId("SI_COMBAT_METRICS_ULTIMATE", "アルティメット ")  -- Ultimate 
+
+-- Statnames
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_SPELL_POWER", "呪文攻撃力")  -- "Spellpower "
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_SPELL_CRIT", "呪文クリティカル")  -- "Spellcrit"
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_MAX_MAGICKA", "最大マジカ")  -- "Max Magicka"
+
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_WEAPON_POWER", "武器攻撃力")  -- "Weaponpower"
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_WEAPON_CRIT", "武器クリティカル")  -- "Weaponcrit"
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_MAX_STAMINA", "最大スタミナ")  -- "Max Stamina"
+
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_PHYSICAL_RESISTANCE", "物理耐性")  -- "Physical Resistance"
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_SPELL_RESISTANCE", "呪文耐性")  -- "Spell Resistance"
+ZO_CreateStringId("SI_COMBAT_METRICS_STAT_CRITICAL_RESISTANCE", "クリティカル耐性")  -- "Critical Resistance"
 
 -- Menus
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_PROFILES", "プロファイル")  -- Profiles
@@ -144,37 +163,63 @@ ZO_CreateStringId("SI_COMBAT_METRICS_MENU_UH_TOOLTIP", "dps/hps計算のため�
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_MG_NAME", "グループダメージを監視")  -- Monitor Group Damage
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_MG_TOOLTIP", "グループ全体のイベントを監視する")  -- Monitor the events of the whole group
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_AS_NAME", "自動スクリーンショット")  -- Auto Screenshot
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_AS_TOOLTIP", "レポート画面を開いた時に自動的にスクリーンショットを撮る")  -- Automatically take a Screenshot when opening the Report window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_AS_TOOLTIP", "レポートを開いた時に自動的にスクリーンショットを撮る")  -- Automatically take a Screenshot when opening the Report window
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_ML_NAME", "スクリーンショットの最小戦闘期間")  -- Minimum fight length for screenshot
 ZO_CreateStringId("SI_COMBAT_METRICS_MENU_ML_TOOLTIP", "自動スクリーンショットを撮る最小の戦闘の期間（秒）")  -- "Minimum fight length in s for auto screenshot
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
-ZO_CreateStringId("SI_COMBAT_METRICS_MENU_", "")  -- 
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SF_NAME", "戦闘レポートの大きさ")  -- Scale of Fight Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SF_TOOLTIP", "戦闘レポートの全ての要素の大きさを調整する")  -- "Adjusts the size of all elements of the Fightreport Window
+
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_LR_NAME", "ライブレポート")  -- Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_ENABLE_NAME", "有効")  -- Enable
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_ENABLE_TOOLTIP", "ライブレポートへの戦闘中のDPSとHPSの表示を有効にする")  -- Enable Live Report Window which shows DPS & HPS during combat
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_LAYOUT_NAME", "レイアウト")  -- Layout
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_LAYOUT_TOOLTIP", "ライブレポートのレイアウトを選択する")  -- Select the Layout of the Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SCALE_NAME", "大きさ")  -- Scale
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SCALE_TOOLTIP", "ライブレポートの大きさ")  -- Scale of the Live report window.
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_BG_NAME", "背景の表示")  -- Show Background
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_BG_TOOLTIP", "ライブレポートの背景を表示する")  -- Show the Background og the Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_DPS_NAME", "DPSの表示")  -- Show DPS
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_DPS_TOOLTIP", "ライブレポートに与えたDPSを表示する")  -- Show DPS you deal in Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_HPS_NAME", "HPSの表示")  -- Show HPS
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_HPS_TOOLTIP", "ライブレポートに唱えたHPSを表示する")  -- Show HPS you cast in Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_INC_DPS_NAME", "被DPSの表示")  -- Show Incoming DPS
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_INC_DPS_TOOLTIP", "ライブレポートに受けたDPSを表示する")  -- Show DPS you receive in Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_INC_HPS_NAME", "被HPSの表示")  -- Show Incoming HPS
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_INC_HPS_TOOLTIP", "ライブレポートに受けたHPSを表示する")  -- Show HPS you receive in Live Report Window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_TIME_NAME", "時間の表示")  -- Show Time
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_SHOW_TIME_TOOLTIP", "ライブレポートに与えたダメージの時間を表示する")  -- Show Time you have been dealing damage in Live Report Window
+
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_TITLE", "チャットに戦闘ログを流す")  -- Stream Combat Log to chat
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_DH_TOOLTIP", "チャット欄にダメージと回復イベントを流す")  -- Streams Damage and Heal Events to chat window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SD_NAME", "ダメージの表示")  -- Show damage
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SD_TOOLTIP", "チャット欄に与えたダメージを表示する")  -- Show damage you deal in chat stream
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SH_NAME", "回復の表示")  -- Show heals
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SH_TOOLTIP", "チャット欄に唱えたヒーを表示する")  -- Show heals you cast in chat stream
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SID_NAME", "被ダメージの表示")  -- Show Incoming damage
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SID_TOOLTIP", "チャット欄に受けたダメージを表示する")  -- Show damage you receive in chat stream
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SIH_NAME", "被回復の表示")  -- Show Incoming heal
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_CHAT_SIH_TOOLTIP", "チャット欄に受けた回復を表示する")  -- Show heals you receive in chat stream
+
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_TITLE", "デバッグオプション")  -- Debug options
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SF_NAME", "戦闘結果の表示")  -- Show Fight Recap
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SF_TOOLTIP", "システムチャット欄に戦闘結果を出力する")  -- Print Combat Results to the system chat window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SA_NAME", "アビリティIDの表示")  -- Show ability IDs
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SA_TOOLTIP", "戦闘レポートにアビリティのIDを表示する")  -- Show ability ids in the fight report window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SFC_NAME", "戦闘計算情報の表示")  -- Show Fight Calculation Info
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SFC_TOOLTIP", "システムチャット欄に計算タイミングに関する情報を出力する")  -- Print Info about the calculation timings to the system chat window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_BI_NAME", "バフ情報の表示")  -- Show Buff Info
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_BI_TOOLTIP", "システムチャット欄にバフイベントを出力する（スパム）")  -- Print Buff events to the system chat window (Spammy)
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_US_NAME", "使用スキルの情報の表示")  -- Show used Skill Info
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_US_TOOLTIP", "システムチャット欄に使用したスキルイベントを出力する")  -- Print used skill events to the system chat window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SG_NAME", "グループ情報の表示")  -- Show group Info
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_SG_TOOLTIP", "システムチャット欄にグループへの加入・脱退を出力する")  -- Print group joining and leave events to the system chat window
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_MD_NAME", "その他のデバッグ情報の表示")  -- Show miscellaneous debug Info
+ZO_CreateStringId("SI_COMBAT_METRICS_MENU_DEBUG_MD_TOOLTIP", "システムチャット欄にその他のイベントを出力する")  -- Print some other events to the system chat window
+
+-- make a label for keybinding
+ZO_CreateStringId("SI_BINDING_NAME_CMX_REPORT_TOGGLE", "戦闘レポートの切り替え")
+ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_SMART", "チャットにボスまたはダメージ合計を投稿する")
+ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_SINGLE", "チャットに単一ターゲットのダメージを投稿する")
+ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_MULTI", "チャットに複数のターゲットのダメージを投稿する")
+ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS", "チャットに単一＋複数のターゲットのダメージを投稿する")
+ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_HPS", "チャットに回復を投稿する")

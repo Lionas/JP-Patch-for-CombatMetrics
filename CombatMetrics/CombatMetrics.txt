@@ -63,6 +63,7 @@ icons\saveicondown.dds
 icons\saveiconover.dds
 icons\saveiconup.dds
 
+lang\en.lua
 lang\$(language).lua
 
 CombatMetrics.lua

@@ -1118,14 +1118,6 @@ function CMX:Initialize(event, addon)
   
   -- make addon options menu
   self.MakeMenu()
-
-  -- make a label for keybinding
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_REPORT_TOGGLE", "Toggle Fight Report")
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_SMART", "Post Boss or Total Damage to Chat")
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_SINGLE", "Post Single Target Damage to Chat")
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS_MULTI", "Post Multi Target Damage to Chat")
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_DPS", "Post Single + Multi Target Damage to Chat")
-  ZO_CreateStringId("SI_BINDING_NAME_CMX_POST_HPS", "Post Heal to Chat")
   
   CMX.CustomAbilityName = {
 	[46539]	= "Major Force"

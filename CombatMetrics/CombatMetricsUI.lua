@@ -573,13 +573,6 @@ function CMX.UI.LRUpdate(dps,hps,idps,ihps,dpstime,gdps,igdps,ghps)
 		if igdps>0 then idpsratio = (math.floor(idps/igdps*1000)/10) end 
 		if ghps>0  then hpsratio  = (math.floor(hps/ghps*1000)/10) end
 
-
-
- 
---		showdps = dps.." / "..gdps.." ("..dpsratio.."%)"
---		showhps = hps.." / "..ghps.." ("..hpsratio.."%)"
---		showidps = idps.." / "..igdps.." ("..idpsratio.."%)"
-
 		showdps = zo_strformat(GetString(SI_COMBAT_METRICS_SHOW_XPS), dps, gdps, dpsratio)
 		showhps = zo_strformat(GetString(SI_COMBAT_METRICS_SHOW_XPS), hps, ghps, hpsratio)
 		showidps = zo_strformat(GetString(SI_COMBAT_METRICS_SHOW_XPS), idps, gidps, idpsratio)
@@ -646,10 +639,7 @@ function CMX.UI:UpdateReport(menuitem, fightid)
 	if fightlabel ~= nil then fightlabel:SetText(showdata.fightname) end
 	if showdata.calculating==true then  -- if it is still calculating wait for it to finish
 
-
---		if fightlabel ~= nil then fightlabel:SetText("Calculating...") end
 		if fightlabel ~= nil then fightlabel:SetText(GetString(SI_COMBAT_METRICS_CALC)) end
-
 
 		zo_callLater(UpdateReport2, 500) 
 		return
@@ -663,23 +653,12 @@ function CMX.UI:UpdateReport(menuitem, fightid)
 	
 	local scale = CMX.set.UI.CMX_LiveReportSettings.scale
 
-
-
-
-
---	CMX_Report_Statlabel_H_2Label:SetText("Group")
 	CMX_Report_Statlabel_H_2Label:SetText(GetString(SI_COMBAT_METRICS_GROUP))
-
 
 	local selectiondata = nil
 	if selectedunits ~= nil or selectedabilities ~= nil then 
 
-
-
-
---		CMX_Report_Statlabel_H_2Label:SetText("Selection")
 		CMX_Report_Statlabel_H_2Label:SetText(GetString(SI_COMBAT_METRICS_SELECTION))
-
 
 		selectiondata = {}
 		local inc = (menuitem=="dmgin" or menuitem=="healin") and true or false
@@ -907,12 +886,7 @@ function CMX.UI:UpdateReport(menuitem, fightid)
 		for k,v in CMX:spairs(showdata.stats[CMX.Resourceselection.."gains"], function(t,a,b) return (t[a][1] or 0)>(t[b][1] or 0) end) do
 			if (v[2] or 0) > 0 then
 
-
-
-
---				local label = k > 0 and zo_strformat("<<!aC:1>>",GetAbilityName(k)) or "Base Regeneration"
 				local label = k > 0 and zo_strformat("<<!aC:1>>",GetAbilityName(k)) or GetString(SI_COMBAT_METRICS_BASE_REG)
-
 
 				local highlight = false
 				if selectedresources ~= nil then highlight = selectedresources[k] ~= nil end
@@ -922,17 +896,13 @@ function CMX.UI:UpdateReport(menuitem, fightid)
 			end
 		end 
 		currentanchor[4] = 8
-		local septext = CMX.UI:Label( 		"CMX_Report_Resources_SepText", 	CMX_Report_Resources_PanelScrollChild, 		{35,fontsize}, 		currentanchor, 	CMX.UI:Font("standard",fontsize,true, scale), {1,1,1,1}, {0,1}, "Drain", false, scale )
+		local septext = CMX.UI:Label( 		"CMX_Report_Resources_SepText", 	CMX_Report_Resources_PanelScrollChild, 		{35,fontsize}, 		currentanchor, 	CMX.UI:Font("standard",fontsize,true, scale), {1,1,1,1}, {0,1}, GetString(SI_COMBAT_METRICS_DRAIN), false, scale )
 		local separator = CMX.UI:Backdrop("CMX_Report_Resources_Sep",		septext,		{currentanchor[5]:GetWidth()-50;1}, {BOTTOMLEFT,BOTTOMRIGHT,2,0}, {0,0,0,0}, {.5,.5,.5,1}, {1,1,2} ,nil, false, scale )
 		currentanchor = {TOPLEFT,BOTTOMLEFT,0,5,septext}
 		local color = CMX.Resourceselection == "magicka" and {0.42,.3,.6,1} or {0.4,0.45,0.05,1}
 		for k,v in CMX:spairs(showdata.stats[CMX.Resourceselection.."drains"], function(t,a,b) return (t[a][1] or 0)>(t[b][1] or 0) end) do
 			if (v[2] or 0) > 0 then
-				
 
-
-
---				local label = k > 0 and zo_strformat("<<!aC:1>>",GetAbilityName(k)) or "Unknown"
 				local label = k > 0 and zo_strformat("<<!aC:1>>",GetAbilityName(k)) or GetString(SI_COMBAT_METRICS_UNKNOWN)
 
 				local highlight = false
@@ -949,19 +919,11 @@ function CMX.UI:UpdateReport(menuitem, fightid)
 	ictrl = 1
 	currentanchor = {TOPLEFT,TOPLEFT,0,1,CMX_Report_Abilities_PanelScrollChild}
 
-
-
---	local critblock = menuitem=="dmgin" and "Blocks" or "Crits"  
 	local critblock = menuitem=="dmgin" and GetString(SI_COMBAT_METRICS_BLOCKS) or GetString(SI_COMBAT_METRICS_CRITS) 
-
 
 	CMX_Report_Abilities_header_crits:SetText(critblock)
 
-
-
---	local dmgheal = (menuitem=="dmgin" or menuitem=="dmgout") and "Damage" or "Healing" 
 	local dmgheal = (menuitem=="dmgin" or menuitem=="dmgout") and GetString(SI_COMBAT_METRICS_DAMAGE) or GetString(SI_COMBAT_METRICS_HEALING)
-
 
 	CMX_Report_Abilities_header_amt:SetText(dmgheal)
 	if selectedunits ~= nil then 
@@ -1026,13 +988,6 @@ function CMX.UI:PosttoChat(mode)
 			end
 		end
 		name = (data.bossfight and bossname) or name
-
-
-
-
-
-
--- Remain to translate
 
 		if units == 1 or mode == "DPSS" then 
 			output 	= zo_strformat("<<!aC:1>>", name) .." - DPS: " .. math.floor(1000*(maxbdmg>0 and maxbdmg or maxdmg)/(data.dpsend-data.dpsstart)) .. " (" .. (maxbdmg>0 and maxbdmg or maxdmg) .. " in ".. dpstime .. "s)"
@@ -1173,14 +1128,6 @@ function CMX.UI.CLAddLine(timems, result, sourcename, targetname, abilityId, hit
 	end
 	local timetext = "|ccccccc["..string.format("%.3f",timems/1000).."]|r "
 
-
-
-
-
-
-
--- Remain to translate
-
 	--ACTION_RESULT_BLOCKED_DAMAGE or 
 	if action == "dmgout" then 
 		local source = "|cffffffYou |r"
@@ -1232,8 +1179,8 @@ function CMX.UI.CLAddLine(timems, result, sourcename, targetname, abilityId, hit
 		local source = "|cffffffYou |r"
 		local action2 = (hitValue>0 and "|c00cc00gained|r ") or (hitValue==0 and "|cffffffgained no|r ") or "|cff3333lost|r " 
 		local amount = hitValue~=0 and "|cffffff"..tostring(math.abs(hitValue)).."|r " or ""
-		local resource = (damagetype == POWERTYPE_MAGICKA and "Magicka ") or (damagetype == POWERTYPE_STAMINA and "Stamina ") or (damagetype == POWERTYPE_ULTIMATE and "Ultimate ")
-		local ability = abilityId and zo_strformat("<<!aC:1>>",GetAbilityName(abilityId)) or "Base Regeneration"
+		local resource = (damagetype == POWERTYPE_MAGICKA and GetString(SI_COMBAT_METRICS_MAGICKA)) or (damagetype == POWERTYPE_STAMINA and GetString(SI_COMBAT_METRICS_STAMINA)) or (damagetype == POWERTYPE_ULTIMATE and GetString(SI_COMBAT_METRICS_ULTIMATE))
+		local ability = abilityId and zo_strformat("<<!aC:1>>",GetAbilityName(abilityId)) or GetString(SI_COMBAT_METRICS_BASE_REG)
 		color = (damagetype == POWERTYPE_MAGICKA and {0.7,0.7,1}) or (damagetype == POWERTYPE_STAMINA and {0.7,1,0.7}) or (damagetype == POWERTYPE_ULTIMATE and {1,1,0.7})
 		text = timetext..source..action2..amount..resource.."|cffffff("..ability..").|r"
 	elseif action == "resource" and hitValue == nil then return 
@@ -1271,10 +1218,8 @@ function CMX.UI:Initialize()
 	-- Fonts
 	CMX.UI.Fonts        = {
 	["meta"]        = "FoundryTacticalCombat/lib/fonts/Metamorphous.otf",
---	["standard"]    = "EsoUi/Common/Fonts/Univers57.otf",
-	["standard"]    = "EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf",
---	["esobold"]     = "EsoUi/Common/Fonts/Univers67.otf",
-	["esobold"]     = "EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf",
+	["standard"]    = GetString(SI_COMBAT_METRICS_STD_FONT),
+	["esobold"]     = GetString(SI_COMBAT_METRICS_ESO_FONT),
 	["antique"]     = "EsoUI/Common/Fonts/ProseAntiquePSMT.otf",
 	["handwritten"] = "EsoUI/Common/Fonts/Handwritten_Bold.otf",
 	["trajan"]      = "EsoUI/Common/Fonts/TrajanPro-Regular.otf",
@@ -1303,22 +1248,16 @@ function CMX.UI:Initialize()
 		[BUFF_EFFECT_TYPE_DEBUFF]	= "|cff3333",
 	}
 
-
-
-
--- Remain to translate
-
 	CMX.UI.statnames={
-		["spellpower"]	= "|c8888ffSpellpower|r ", 			--|c8888ff
-		["spellcrit"]	= "|c8888ffSpellcrit|r ",
-		["maxmagicka"]	= "|c8888ffMax Magicka|r ",
-		["weaponpower"]	= "|c88ff88Weaponpower|r ",			--|c88ff88
-		["weaponcrit"]	= "|c88ff88Weaponcrit|r ",
-		["maxstamina"]	= "|c88ff88Max Stamina|r ",
-		["physres"]		= "|cffff88Physical Resistance|r ",	--|cffff88
-		["spellres"]	= "|cffff88Spell Resistance|r ",
-		["critres"]		= "|cffff88Critical Resistance|r ",
-		
+		["spellpower"]	= "|c8888ff"..GetString(SI_COMBAT_METRICS_STAT_SPELL_POWER).."|r ", 			--|c8888ff
+		["spellcrit"]	= "|c8888ff"..GetString(SI_COMBAT_METRICS_STAT_SPELL_CRIT).."|r ",
+		["maxmagicka"]	= "|c8888ff"..GetString(SI_COMBAT_METRICS_STAT_MAX_MAGICKA).."|r ",
+		["weaponpower"]	= "|c88ff88"..GetString(SI_COMBAT_METRICS_STAT_WEAPON_POWER).."|r ",			--|c88ff88
+		["weaponcrit"]	= "|c88ff88"..GetString(SI_COMBAT_METRICS_STAT_WEAPON_CRIT).."|r ",
+		["maxstamina"]	= "|c88ff88"..GetString(SI_COMBAT_METRICS_STAT_MAX_STAMINA).."|r ",
+		["physres"]		= "|cffff88"..GetString(SI_COMBAT_METRICS_STAT_PHYSICAL_RESISTANCE).."|r ",	--|cffff88
+		["spellres"]	= "|cffff88"..GetString(SI_COMBAT_METRICS_STAT_SPELL_RESISTANCE).."|r ",
+		["critres"]		= "|cffff88"..GetString(SI_COMBAT_METRICS_STAT_CRITICAL_RESISTANCE).."|r ",
 	}	
 	
 	-- Array to select what to show on Stats section of Detailed report
@@ -1343,7 +1282,7 @@ function CMX.UI:Initialize()
 			label3=GetString(SI_COMBAT_METRICS_DPS), 
 			statitems={"tdmg","dps","max","chits","thits"},
 			avgstat={"dmgavg","tdmg","thits"},
-			targetlabel="Target"
+			targetlabel=GetString(SI_COMBAT_METRICS_TARGET)
 		},
 		healout = {	
 			{"dpstime","combattime",nil},
@@ -1363,7 +1302,7 @@ function CMX.UI:Initialize()
 			label3=GetString(SI_COMBAT_METRICS_HPS),
 			statitems={"theal","hps","max","cheals","theals"},
 			avgstat={"healavg","theal","theals"},
-			targetlabel="Target"
+			targetlabel=GetString(SI_COMBAT_METRICS_TARGET)
 		},
 		dmgin = {	
 			{"dpstime","combattime",nil},
@@ -1383,7 +1322,7 @@ function CMX.UI:Initialize()
 			label3=GetString(SI_COMBAT_METRICS_INC_DPS),
 			statitems={"tdmg","dps","max","bhits","thits"},
 			avgstat={"dmgavg","tdmg","thits"},
-			targetlabel="Source"
+			targetlabel=GetString(SI_COMBAT_METRICS_SOURCE)
 		},
 		healin = {	
 			{"dpstime","combattime",nil},
@@ -1404,7 +1343,7 @@ function CMX.UI:Initialize()
 			label3=GetString(SI_COMBAT_METRICS_INC_HPS),
 			statitems={"theal","hps","max","cheals","theals"},
 			avgstat={"healavg","theal","theals"},
-			targetlabel="Source"
+			targetlabel=GetString(SI_COMBAT_METRICS_SOURCE)
 		},
 		general = {	
 			{"magickagps","magickadrps"},
