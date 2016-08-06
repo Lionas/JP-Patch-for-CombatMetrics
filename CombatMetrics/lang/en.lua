@@ -84,8 +84,8 @@ ZO_CreateStringId("SI_COMBAT_METRICS_STAMINA_C", "Stamina:")  -- Stamina:
 ZO_CreateStringId("SI_COMBAT_METRICS_ULTIMATE_C", "Ultimate:")  -- Ultimate:
 
 ZO_CreateStringId("SI_COMBAT_METRICS_STATS", "Stats")  -- Stats
-ZO_CreateStringId("SI_COMBAT_METRICS_AVE", "Average")  -- Average
-ZO_CreateStringId("SI_COMBAT_METRICS_MAX", "Maximum")  -- Maximum
+ZO_CreateStringId("SI_COMBAT_METRICS_AVE", "Avg")  -- Average
+ZO_CreateStringId("SI_COMBAT_METRICS_MAX", "Max")  -- Maximum
 ZO_CreateStringId("SI_COMBAT_METRICS_MAX_MAGICKA_C", "MaxMagicka:")  -- MaxMagicka:
 ZO_CreateStringId("SI_COMBAT_METRICS_SPELL_DMG_C", "Spell Dmg:")  -- Spell Dmg:
 ZO_CreateStringId("SI_COMBAT_METRICS_SPELL_CRIT_C", "Spell Crit:")  -- Spell Crit:
