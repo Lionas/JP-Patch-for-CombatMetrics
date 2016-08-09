@@ -126,7 +126,7 @@ ZO_CreateStringId("SI_COMBAT_METRICS_TARGET", "ターゲット")  -- Target
 ZO_CreateStringId("SI_COMBAT_METRICS_PERCENT", "%")  -- %
 
 ZO_CreateStringId("SI_COMBAT_METRICS_AVILITY", "アビリティ")  -- Ability
-ZO_CreateStringId("SI_COMBAT_METRICS_PER_HITS", "クリ/ヒット")  -- Crits/Hits
+ZO_CreateStringId("SI_COMBAT_METRICS_PER_HITS", "/ヒット")  -- /Hits
 ZO_CreateStringId("SI_COMBAT_METRICS_CRITS_PER", "クリ %")  -- Crit %
 
 ZO_CreateStringId("SI_COMBAT_METRICS_MAGICKA", "マジカ ")  -- Magicka 
